@@ -13,7 +13,7 @@ E-Commerce Disinfectant is basically a e-commerece project where we can checkout
 
 
 ## GIF
-<img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/fun.gif" width="705">
+<img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/fun.webp" width="705">
 
 
 This repo contain following component :
