@@ -16,27 +16,42 @@ E-Commerce Disinfectant is basically a e-commerece project where we can checkout
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/fun.webp" width="705">
 
 
+- [前言](#前言)
+- [安装](#安装)
+- [使用](#使用)
+    - [配置](#配置options)
+- [实现原理](#实现原理)
+    - [1、采集坐标](#1采集画笔经过的点坐标和时间)
+    - [2、计算速度](#2计算两点之间移动速度)
+    - [3、计算线宽](#3计算两点之间线的宽度)
+    - [4、画线](#4画曲线直线)
+- [快捷链接](#快捷链接)
+
+## 前言
+受疫情的影响，无纸化流程和电子合同开始普及，电子签名需求也不断增加，签名体验也在逐渐改善，从一开始简单的canvas画线，到追求线条丝滑圆润，再到要求和纸上写字一样的笔锋效果等等。网上不少现成开源的签名库，其中[signature_pad](https://github.com/szimek/signature_pad)笔锋效果实现比较好，但具体使用还是会发现有明显的锯齿感，于是利用工作之余，根据自身理解换了另一种方案实现了一套，同时也为小程序开发了一版，一起分享给有需要的同学。
+
 This repo contain following component :
 
-1) Splash Screen
-2) OnBoarding Screen
-3) Login Screen
-4) Signup Screen
-5) OTP Screen
-6) Home Screen
-7) Category Screen
-8) Product List
-9) Product Details
-10) Order
-11) Cart
-12) Profile
+- [实现原理](#实现原理)
+- Splash Screen
+- OnBoarding Screen
+- [LoginModule](LoginModule)
+- Signup Screen
+- OTP Screen
+- Home Screen
+- Category Screen
+- Product List
+- Product Details
+- Order
+- Cart
+- Profile
 
 ## Splash Page
 
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/intro.jpg" height="500">
 
 
-## Login Module
+## LoginModule
 
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/login.jpg" height="500">
 
