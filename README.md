@@ -27,8 +27,8 @@ This repo contain following component :
 - [Product List](#ProductDetail)
 - [Product Detail](#ProductDetail)
 - [Order Page](#OrderModule)
-- [Cart Page](#ProfilePage)
-- [Profile Page](#ProfilePage)
+- [Cart Page](#ProfileModule)
+- [Profile Page](#ProfileModule)
 
 ## SplashPage
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/intro.jpg" height="500">
