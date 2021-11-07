@@ -35,7 +35,7 @@ This repo contain following component :
 - [实现原理](#实现原理)
 - Splash Screen
 - OnBoarding Screen
-- [LoginModule](LoginModule)
+- [Login Module](LoginModule)
 - Signup Screen
 - OTP Screen
 - Home Screen
