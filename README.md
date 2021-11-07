@@ -33,7 +33,7 @@ This repo contain following component :
 - [实现原理](#实现原理)
 - Splash Screen
 - OnBoarding Screen
-- [Login Module](LoginModule)
+- [Login](Login)
 - Signup Screen
 - OTP Screen
 - Home Screen
@@ -49,7 +49,7 @@ This repo contain following component :
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/intro.jpg" height="500">
 
 
-## LoginModule
+## Login
 受疫情的影响，无纸化流程和电子合同开始普及，电子签名需求也不断增加，签名体验也在逐渐改善，从一开始简单的canvas画线，到追求线条丝滑圆润，再到要求和纸上写字一样的笔锋效果等等。网上不少现成开源的签名库，其中[signature_pad](https://github.com/szimek/signature_pad)笔锋效果实现比较好，但具体使用还是会发现有明显的锯齿感，于是利用工作之余，根据自身理解换了另一种方案实现了一套，同时也为小程序开发了一版，一起分享给有需要的同学。
 
 ## LoginModuless
