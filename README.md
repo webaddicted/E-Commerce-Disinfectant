@@ -13,49 +13,39 @@ E-Commerce Disinfectant is basically a e-commerece project where we can checkout
 
 
 ## GIF
-<img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/fun.gif" width="705">
-
+<img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/fun.webp" width="705">
 
 This repo contain following component :
 
-1) Splash Screen
-2) OnBoarding Screen
-3) Login Screen
-4) Signup Screen
-5) OTP Screen
-6) Home Screen
-7) Category Screen
-8) Product List
-9) Product Details
-10) Order
-11) Cart
-12) Profile
+- [Splash Page](#SplashPage)
+- [OnBoarding Page](#SplashPage)
+- [Login Module](#LoginModule)
+- [Signup Page](#LoginModule)
+- [OTP Page](#LoginModule)
+- [Home Page](#HomePage)
+- [Category Page](#HomePage)
+- [Product List](#ProductDetail)
+- [Product Detail](#ProductDetail)
+- [Order Page](#OrderModule)
+- [Cart Page](#ProfileModule)
+- [Profile Page](#ProfileModule)
 
-## Splash Page
-
+## SplashPage
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/intro.jpg" height="500">
 
-
-## Login Module
-
+## LoginModule
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/login.jpg" height="500">
 
-
-## Home Page
-
+## HomePage
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/home.jpg" height="500">
 
-## Product Detail Module
-
+## ProductDetail
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/detail.jpg" height="500">
 
-## Order Module
-
+## OrderModule
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/order.jpg" height="500">
 
-
-## Profile Module
-
+## ProfileModule
 <img src="https://github.com/webaddicted/E-Commerce-disinfectant/raw/main/screenshot/profile.jpg" height="500">
 
 
