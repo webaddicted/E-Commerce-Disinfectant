@@ -16,6 +16,7 @@ HiltDemo repository handle all api scenario. Manage all validation DI (Hilt).
 
 ## GIF
 <img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/rallis.png" width="350">
+<img src="https://github.com/webaddicted/ImagePickerCompressor/raw/master/screenshot/home.jpg" height="500">
 
 ##Feature
 
@@ -40,7 +41,7 @@ HiltDemo repository handle all api scenario. Manage all validation DI (Hilt).
 - 
 
 ## IntroScreen
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/intro.jpg" height="500">
+<img src="https://github.com/webaddicted/Rallis/raw/master/screenshot/intro.jpg" height="500">
 
 ## LoginScreen
 <img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/login.jpg" height="500">
