@@ -1,22 +1,20 @@
-# Rallis
+# E-Commerce-Disinfectant
 
-![Open Issue](https://img.shields.io/github/issues/webaddicted/Rallis)
-![Forks](https://img.shields.io/github/forks/webaddicted/Rallis)
-![Stars](https://img.shields.io/github/stars/webaddicted/Rallis)
-![License](https://img.shields.io/github/license/webaddicted/Rallis)
+![Open Issue](https://img.shields.io/github/issues/webaddicted/E-Commerce-Disinfectant)
+![Forks](https://img.shields.io/github/forks/webaddicted/E-Commerce-Disinfectant)
+![Stars](https://img.shields.io/github/stars/webaddicted/E-Commerce-Disinfectant)
+![License](https://img.shields.io/github/license/webaddicted/E-Commerce-Disinfectant)
 
-***You can Install and test latest Rallis app from below 👇***
+***You can Install and test latest E-Commerce-Disinfectant app from below 👇***
 
-[![Rallis](https://img.shields.io/badge/Rallis-Apk-brightgreen.svg?style=for-the-badge&logo=android)](https://github.com/webaddicted/HiltDemo/blob/main/apk/app.apk)
+[![Rallis](https://img.shields.io/badge/Rallis-Apk-brightgreen.svg?style=for-the-badge&logo=android)](https://github.com/webaddicted/E-Commerce-Disinfectant/blob/main/apk/app.apk)
 
-HiltDemo repository handle all api scenario. Manage all validation DI (Hilt).
 
 <!-- ## GIF -->
-<!-- <img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/fun.webp" width="305"> -->
+<!-- <img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/fun.webp" width="305"> -->
 
 ## GIF
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/rallis.png" width="350">
-<img src="https://github.com/webaddicted/ImagePickerCompressor/raw/master/screenshot/home.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/rallis.png" width="350">
 
 ##Feature
 
@@ -41,22 +39,22 @@ HiltDemo repository handle all api scenario. Manage all validation DI (Hilt).
 - 
 
 ## IntroScreen
-<img src="https://github.com/webaddicted/Rallis/raw/master/screenshot/intro.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/master/screenshot/intro.jpg" height="500">
 
 ## LoginScreen
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/login.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/login.jpg" height="500">
 
 ## HomeScreen
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/home.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/home.jpg" height="500">
 
 ## ProfileScreen
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/profile.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/profile.jpg" height="500">
 
 ## OrderScreen
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/order.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/order.jpg" height="500">
 
 ## DetailScreen
-<img src="https://github.com/webaddicted/Rallis/raw/main/screenshot/detail.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/detail.jpg" height="500">
 
 
 ## LICENSE
