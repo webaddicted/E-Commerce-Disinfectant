@@ -11,7 +11,7 @@
 
 
 <!-- ## GIF -->
-<!-- <img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/fun.webp" width="305"> -->
+ <img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/fun.webp" width="305">
 
 ## GIF
 <img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/rallis.png" width="350">
@@ -39,7 +39,7 @@
 - 
 
 ## IntroScreen
-<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/master/screenshot/intro.jpg" height="500">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/intro.jpg" height="500">
 
 ## LoginScreen
 <img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/login.jpg" height="500">
