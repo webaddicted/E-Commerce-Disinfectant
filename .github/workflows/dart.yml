@@ -37,20 +37,19 @@ jobs:
         run: flutter pub get
       #      - run: flutter analyze .
       #      - run: flutter test
-      - run: flutter build apk
-      - uses: actions/upload-artifact@v1
-
-
       - name: Start Android Release Build
         run: flutter build appbundle
-#      - name: Upload Android Release
-#        uses: actions/upload-artifact@v2
+
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
 #          name: android-release
 #          path: build/app/outputs/bundle/release/app-release.aab
 
+#      - name: Upload Android Release
+#        uses: actions/upload-artifact@v2
+#      - run: flutter build apk
+#      - uses: actions/upload-artifact@v1
 
 
       - name: Start Web Release Build
