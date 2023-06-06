@@ -30,7 +30,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable' # or: 'beta', 'dev' or 'master'
-          cache: true
+#          cache: true
       - run: flutter --version
       - run: flutter pub get
       - name: Get dependencies
