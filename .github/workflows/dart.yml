@@ -52,14 +52,14 @@ jobs:
 #      - uses: actions/upload-artifact@v1
 
 
-      - name: Start Web Release Build
-        run: flutter build web --release
+#      - name: Start Web Release Build
+#        run: flutter build web --release
 
 #      - name: Upload Web Build Files
 #        uses: actions/upload-artifact@v2
-        with:
-          name: web-release
-          path: ./build/web
+#        with:
+#          name: web-release
+#          path: ./build/web
 
 #  deploy:
 #    name: Deploy Android Build
