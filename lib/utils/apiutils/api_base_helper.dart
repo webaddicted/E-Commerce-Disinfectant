@@ -3,12 +3,15 @@ import 'dart:io';
 
 // import 'package:alice/alice.dart';
 import 'package:dio/dio.dart';
+import 'package:rallis/utils/common/global_utilities.dart';
 import 'package:rallis/utils/constant/api_constant.dart';
 import 'package:rallis/utils/constant/string_const.dart';
+import 'package:rallis/utils/sp/shared_preference_service.dart';
 
 /// Helper class for configuring Api calls
 class ApiBaseHelper {
   Dio? _dio;
+  late final SharedPreferenceService _prefs;
   // Alice? alice;
   ApiBaseHelper() {
     // alice = Alice(showNotification: true);
@@ -23,6 +26,7 @@ class ApiBaseHelper {
     // _dio.options.headers['content-Type'] = 'application/json';
     // _dio.options.headers["authorization"] = "token ${token}";
     _dio?.interceptors.add(LogInterceptor());
+    // _dio?.interceptors.add(_DioHeaderInterceptor(Get.find<SharedPreferenceService>()));
     // _dio!.interceptors.add(alice!.getDioInterceptor()); //displays logs in notification view
     // return dio
     //   ..interceptors.add(
@@ -51,19 +55,19 @@ class ApiBaseHelper {
           queryParameters: params,
           options: Options(responseType: ResponseType.json)))!;
     } on SocketException catch (_) {
-      print('object SocketException');
+      printLog(msg: 'object SocketException');
       response = Response(requestOptions: RequestOptions(path: 'path'));
       response.statusCode = ApiResponseCode.internetUnavailable;
       response.statusMessage = StringConst.noInternetConnection;
     } on Exception catch (e) {
-      print('object Exception');
+      printLog(msg: 'object Exception');
       response = Response(requestOptions: RequestOptions(path: 'path'));
       response.statusCode = ApiResponseCode.unknown;
       response.statusMessage =
           e.toString() + " " + StringConst.somethingWentWrong;
       // response.data = e;
     }
-    print('response : $response');
+    printLog(msg: 'response : $response');
     return response;
   }
 
@@ -106,5 +110,26 @@ class ApiResponseCode {
 }
 
 final apiHelper = ApiBaseHelper();
+
+class _DioHeaderInterceptor extends Interceptor {
+  final SharedPreferenceService _prefs;
+
+  _DioHeaderInterceptor(this._prefs);
+
+  @override
+  void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    String? authToken = _prefs.getAuthToken();
+    options.headers['Content-Type'] = 'application/json';
+    // options.connectTimeout = 60 * 1000;
+    // options.receiveTimeout = 60 * 1000;
+    if (authToken != null && authToken.isNotEmpty) {
+      options.headers['Authorization'] = authToken;
+    } else {
+      // to do get authtoken from authenticate api
+    }
+    printLog(msg: "Headers: ${options.headers}");
+    super.onRequest(options, handler);
+  }
+}
 
 

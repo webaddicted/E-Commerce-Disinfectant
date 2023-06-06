@@ -523,7 +523,7 @@ imagePickerDialog({Function? pickImg}) {
 //   File filePath = File(image.path);
 //   final bytes = filePath.readAsBytesSync();
 //   var base64Image = 'data:image/jpeg;base64,' + base64Encode(bytes);
-//   // print('object base64Image $base64Image');
+//   // printLog(msg:'object base64Image $base64Image');
 //   pickImg(filePath, base64Image);
 //   // base64Image = Io.File(filePath.path).readAsBytesSync();
 // }
@@ -819,14 +819,14 @@ Widget apiHandler<T>(
     return Container();
   } else {
     switch (response.status) {
-      case ApiStatus.LOADING:
+      case ApiStatus.loading:
         return loading ??
             Center(
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(ColorConst.appColor),
               ),
             );
-      case ApiStatus.ERROR:
+      case ApiStatus.error:
         return Center(
           child: getTxtColor(
               msg: response.apiError!.errorMessage.toString(),

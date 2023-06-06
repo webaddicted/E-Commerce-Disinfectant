@@ -15,12 +15,12 @@ class ApiResponse<T> {
 
   /// loading
   static ApiResponse<T> loading<T>() {
-    return ApiResponse<T>(status: ApiStatus.LOADING);
+    return ApiResponse<T>(status: ApiStatus.loading);
   }
 
   /// success
   static ApiResponse success<T>(T data) {
-    return ApiResponse<T>(status: ApiStatus.COMPLETED, data: data);
+    return ApiResponse<T>(status: ApiStatus.success, data: data);
   }
 
   /// error
@@ -28,7 +28,7 @@ class ApiResponse<T> {
     var apiError =
         ApiError(statusCode: errCode!, errorMessage: errMsg!, errorBody: errBdy);
     return ApiResponse.withoutData(
-        status: ApiStatus.ERROR, apiError: apiError);
+        status: ApiStatus.error, apiError: apiError);
   }
 
   /// method wraps response in ApiResponse class
@@ -72,4 +72,4 @@ class ApiError<T> {
 }
 
 /// Enum to check Api Status
-enum ApiStatus { LOADING, COMPLETED, ERROR }
+enum ApiStatus { loading, success, error }

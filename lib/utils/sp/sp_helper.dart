@@ -1,3 +1,5 @@
+import 'package:rallis/utils/apiutils/api_response.dart';
+import 'package:rallis/utils/common/global_utilities.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SPHelper<T> {
@@ -16,7 +18,7 @@ class SPHelper<T> {
         return sp.getDouble(key) as T;
       }
     } catch (e) {
-      print("SP helper : "+e.toString());
+      printLog(tag: "SPHelper",msg: e.toString(), status: ApiStatus.error);
     }
     return 0 as T;
   }
@@ -38,7 +40,7 @@ class SPHelper<T> {
         return sp.setStringList(key, value);
       }
     } catch (e) {
-      print("SP helper : "+e.toString());
+      printLog(tag: "SPHelper",msg:e.toString(), status: ApiStatus.error);
     }
     return false;
   }
@@ -48,7 +50,7 @@ class SPHelper<T> {
     try {
       return sp.getKeys();
     } catch (e) {
-      print("SP helper : "+e.toString());
+      printLog(tag: "SPHelper",msg:e.toString(), status: ApiStatus.error);
       return null!;
     }
   }
@@ -58,7 +60,7 @@ class SPHelper<T> {
     try {
       return sp.remove(key);
     } catch (e) {
-      print("SP helper : "+e.toString());
+      printLog(tag: "SPHelper",msg:e.toString(), status: ApiStatus.error);
       return false;
     }
   }
@@ -68,7 +70,7 @@ class SPHelper<T> {
     try {
       return sp.clear();
     } catch (e) {
-      print("SP helper : "+e.toString());
+      printLog(tag: "SPHelper",msg:e.toString(), status: ApiStatus.error);
       return false;
     }
   }
@@ -78,7 +80,7 @@ class SPHelper<T> {
     try {
       return sp.containsKey(key);
     } catch (e) {
-      print("SP helper : "+e.toString());
+      printLog(tag: "SPHelper",msg:e.toString(), status: ApiStatus.error);
       return false;
     }
   }
