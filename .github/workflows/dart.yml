@@ -43,8 +43,8 @@ jobs:
 
       - name: Start Android Release Build
         run: flutter build appbundle
-      - name: Upload Android Release
-        uses: actions/upload-artifact@v2
+#      - name: Upload Android Release
+#        uses: actions/upload-artifact@v2
         with:
           name: release-apk
           path: build/app/outputs/apk/release/app-release.apk
