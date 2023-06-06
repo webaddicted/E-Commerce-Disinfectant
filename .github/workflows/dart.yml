@@ -32,12 +32,13 @@ jobs:
           channel: 'stable' # or: 'beta', 'dev' or 'master'
       - run: flutter --version
       - run: flutter pub get
+      - name: Get dependencies
+        run: flutter pub get
       #      - run: flutter analyze .
       #      - run: flutter test
       - run: flutter build apk
       - uses: actions/upload-artifact@v1
-      - name: Get dependencies
-        run: flutter pub get
+
 
       - name: Start Android Release Build
         run: flutter build appbundle
