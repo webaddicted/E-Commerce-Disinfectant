@@ -14,7 +14,7 @@
  <img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/fun.webp" width="305">
 
 ## GIF
-<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/logo.png" width="350">
+<img src="https://github.com/webaddicted/E-Commerce-Disinfectant/raw/main/screenshot/logo.png" width="250">
 
 ## Feature
 
