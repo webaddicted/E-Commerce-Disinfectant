@@ -31,11 +31,17 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
-      key: _scaffoldKey,
-      backgroundColor: ColorConst.whiteColor,
-      drawer: NavDrawerWidget(),
-      body: createUi(size),
+    return WillPopScope(
+      onWillPop: () {
+        // checkForUpdate();
+        return onWillPop();
+      },
+      child: Scaffold(
+        key: _scaffoldKey,
+        backgroundColor: ColorConst.whiteColor,
+        drawer: NavDrawerWidget(),
+        body: createUi(size),
+      ),
     );
   }
 
