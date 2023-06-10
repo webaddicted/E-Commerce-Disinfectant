@@ -20,6 +20,7 @@ import 'package:rallis/utils/constant/string_const.dart';
 import 'package:rallis/view/home/nav_drawer_widget.dart';
 import 'package:rallis/view/list/list_page.dart';
 import 'package:rallis/view/widget/banner_img_item.dart';
+import 'package:rallis/view/widget/circle_category_item.dart';
 import 'package:rallis/view/widget/grid_item.dart';
 import 'package:rallis/view/widget/horizontal_list_ltem.dart';
 
@@ -61,8 +62,8 @@ class HomePage extends GetView<HomeController> {
               const SizedBox(height: 5),
               _buildActivities(),
               const SizedBox(height: 20),
-              // CircleCategoryItem(title: StringConst.category),
-              // const SizedBox(height: 10),
+              CircleCategoryItem(title: StringConst.category),
+              const SizedBox(height: 10),
               BannerImgItem(title: StringConst.latestUpdate),
               const SizedBox(height: 15),
               carouselView(),

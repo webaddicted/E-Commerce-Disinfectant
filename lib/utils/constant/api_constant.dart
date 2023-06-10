@@ -2,7 +2,7 @@ class ApiConstant {
   static const String baseUrl = 'https://api.unsplash.com/';
   static const String unsplashApiKey =
       "e993cde7a4d49aa482dd572dfca4dd27891fc573c4f5bed7f202e156e02b8e8e";
-  static const int timeOut = 1500000;
+  static const int timeOut = 15;
   static const pageSize = 20;
 
   static String known = 'Known';

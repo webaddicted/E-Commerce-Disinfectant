@@ -779,17 +779,32 @@ Widget getStaggered(
     required Function widget,
     ScrollPhysics? physics,
     ScrollController? controller}) {
-  return StaggeredGridView.countBuilder(
-      crossAxisCount: crossAxisCount,
-      mainAxisSpacing: 1.0,
-      crossAxisSpacing: 1.0,
-      shrinkWrap: true,
-      controller: controller,
-      padding: const EdgeInsets.all(0),
-      staggeredTileBuilder: (int index) => StaggeredTile.extent(1, height),
-      physics: physics ?? const BouncingScrollPhysics(),
-      itemCount: itemCount,
-      itemBuilder: (BuildContext context, int index) => widget(context, index));
+  return MasonryGridView.count(
+    crossAxisCount: 2,
+    mainAxisSpacing: 1,
+    crossAxisSpacing: 1,
+    itemCount: itemCount,
+    shrinkWrap: true,
+    cacheExtent: height,
+    itemBuilder: (context, index) {
+      return  widget(context, index);
+      //   Tile(
+      //   index: index,
+      //   extent: (index % 5 + 1) * 100,
+      // );
+    },
+  );
+  // return StaggeredGridView.countBuilder(
+  //     crossAxisCount: crossAxisCount,
+  //     mainAxisSpacing: 1.0,
+  //     crossAxisSpacing: 1.0,
+  //     shrinkWrap: true,
+  //     controller: controller,
+  //     padding: const EdgeInsets.all(0),
+  //     staggeredTileBuilder: (int index) => StaggeredTile.extent(1, height),
+  //     physics: physics ?? const BouncingScrollPhysics(),
+  //     itemCount: itemCount,
+  //     itemBuilder: (BuildContext context, int index) => widget(context, index));
 }
 
 Widget getHeading(

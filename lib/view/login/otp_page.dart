@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pinput/pin_put/pin_put.dart';
+import 'package:pinput/pinput.dart';
 import 'package:rallis/controller/login_controller.dart';
 import 'package:rallis/utils/common/widget_helper.dart';
 import 'package:rallis/utils/constant/color_const.dart';
@@ -19,7 +19,6 @@ class OtpPage extends GetView<LoginController> {
   final _counter = 0.obs;
 
   String otp = '';
-
   @override
   Widget build(BuildContext context) {
     _startTimer();
@@ -130,41 +129,108 @@ class OtpPage extends GetView<LoginController> {
       }
     });
   }
+  final focusNode = FocusNode();
 
   Widget onlySelectedBorderPinPut() {
     final BoxDecoration pinPutDecoration = BoxDecoration(
       color: const Color.fromRGBO(235, 236, 237, 1),
       borderRadius: BorderRadius.circular(5.0),
     );
+    const focusedBorderColor = Color.fromRGBO(23, 171, 144, 1);
+    const fillColor = Color.fromRGBO(243, 246, 249, 0);
+    const borderColor = Color.fromRGBO(23, 171, 144, 0.4);
+
+    final defaultPinTheme = PinTheme(
+      width: 56,
+      height: 56,
+      textStyle: const TextStyle(
+        fontSize: 22,
+        color: Color.fromRGBO(30, 60, 87, 1),
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(19),
+        border: Border.all(color: borderColor),
+      ),
+    );
     return Form(
       child: GestureDetector(
         onLongPress: () {
           // print(_formKey.currentState.validate());
         },
-        child: PinPut(
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          withCursor: true,
-          fieldsCount: 5,
-          fieldsAlignment: MainAxisAlignment.spaceAround,
-          textStyle: const TextStyle(fontSize: 18, color: Colors.black),
-          eachFieldMargin: const EdgeInsets.all(0),
-          eachFieldWidth: 45.0,
-          eachFieldHeight: 55.0,
-          onChanged: changePin,
-          onSubmit: (String pin) => print(pin),
-          focusNode: _pinPutFocusNode,
+        child: Pinput(
           controller: _pinPutController,
-          submittedFieldDecoration: pinPutDecoration,
-          selectedFieldDecoration: pinPutDecoration.copyWith(
-            color: Colors.white,
-            border: Border.all(
-              width: 2,
-              color: const Color.fromRGBO(160, 215, 220, 1),
+          focusNode: focusNode,
+          androidSmsAutofillMethod:
+          AndroidSmsAutofillMethod.smsUserConsentApi,
+          listenForMultipleSmsOnAndroid: true,
+          defaultPinTheme: defaultPinTheme,
+          validator: (value) {
+            return value == '2222' ? null : 'Pin is incorrect';
+          },
+          // onClipboardFound: (value) {
+          //   debugPrint('onClipboardFound: $value');
+          //   pinController.setText(value);
+          // },
+          hapticFeedbackType: HapticFeedbackType.lightImpact,
+          onCompleted: (pin) {
+            debugPrint('onCompleted: $pin');
+          },
+          onChanged: (value) {
+            debugPrint('onChanged: $value');
+          },
+          cursor: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(bottom: 9),
+                width: 22,
+                height: 1,
+                color: focusedBorderColor,
+              ),
+            ],
+          ),
+          focusedPinTheme: defaultPinTheme.copyWith(
+            decoration: defaultPinTheme.decoration!.copyWith(
+              borderRadius: BorderRadius.circular(8),
+              border: Border.all(color: focusedBorderColor),
             ),
           ),
-          followingFieldDecoration: pinPutDecoration,
-          pinAnimationType: PinAnimationType.scale,
+          submittedPinTheme: defaultPinTheme.copyWith(
+            decoration: defaultPinTheme.decoration!.copyWith(
+              color: fillColor,
+              borderRadius: BorderRadius.circular(19),
+              border: Border.all(color: focusedBorderColor),
+            ),
+          ),
+          errorPinTheme: defaultPinTheme.copyBorderWith(
+            border: Border.all(color: Colors.redAccent),
+          ),
         ),
+        // child: Pinput(
+        //   length: 5,
+        //   pinAnimationType: PinAnimationType.scale,
+        //   onChanged: changePin,
+        //   focusNode: _pinPutFocusNode,
+        //   controller: _pinPutController,
+        //
+        //   autovalidateMode: AutovalidateMode.onUserInteraction,
+        //   withCursor: true,
+        //   fieldsAlignment: MainAxisAlignment.spaceAround,
+        //   textStyle: const TextStyle(fontSize: 18, color: Colors.black),
+        //   eachFieldMargin: const EdgeInsets.all(0),
+        //   eachFieldWidth: 45.0,
+        //   eachFieldHeight: 55.0,
+        //   onSubmit: (String pin) => print(pin),
+        //   submittedFieldDecoration: pinPutDecoration,
+        //   selectedFieldDecoration: pinPutDecoration.copyWith(
+        //     color: Colors.white,
+        //     border: Border.all(
+        //       width: 2,
+        //       color: const Color.fromRGBO(160, 215, 220, 1),
+        //     ),
+        //   ),
+        //   followingFieldDecoration: pinPutDecoration,
+        // ),
       ),
     );
   }
