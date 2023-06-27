@@ -64,7 +64,7 @@ class ApiBaseHelper {
       response = Response(requestOptions: RequestOptions(path: 'path'));
       response.statusCode = ApiResponseCode.unknown;
       response.statusMessage =
-          e.toString() + " " + StringConst.somethingWentWrong;
+          "$e ${StringConst.somethingWentWrong}";
       // response.data = e;
     }
     printLog(msg: 'response : $response');
