@@ -1,8 +1,7 @@
 class AssetsConst {
 //  {START FONT FAMILY}
   static const String appName = 'Flutter Demo';
-  static const String zillasLabFont = 'Zillaslab';
-  static const String ptFonts = 'PT';
+  static const String poppinsFonts = 'PT';
 //  {END FONT FAMILY}
 
 //  {START IMAGES}

@@ -192,16 +192,16 @@ class _DetailPageState extends State<DetailPage> {
                   Get.toNamed(RoutersConst.cart);
                 },
                 clipBehavior: Clip.antiAlias,
-                child: getTxtWhiteColor(
-                    msg: 'Add To Cart',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
                 style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.only(
                         left: 60, right: 60, top: 10, bottom: 10),
-                    primary: ColorConst.appColor,
+                    backgroundColor: ColorConst.appColor,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)))),
+                        borderRadius: BorderRadius.circular(20))),
+                child: getTxtWhiteColor(
+                    msg: 'Add To Cart',
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold)),
           ),
           Container(
             margin: const EdgeInsets.only(left: 8, right: 8),
@@ -211,16 +211,14 @@ class _DetailPageState extends State<DetailPage> {
                   Get.toNamed(RoutersConst.cart);
                 },
                 clipBehavior: Clip.antiAlias,
-                child: getTxtWhiteColor(
-                    msg: 'Buy Now',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
                 style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.only(
                         left: 60, right: 60, top: 10, bottom: 10),
-                    primary: ColorConst.appColor,
+                    backgroundColor: ColorConst.appColor,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)))),
+                        borderRadius: BorderRadius.circular(20))),
+                child: getTxtWhiteColor(
+                    msg: 'Buy Now', fontSize: 15, fontWeight: FontWeight.bold)),
           )
         ],
       ),

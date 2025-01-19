@@ -128,7 +128,7 @@ TextStyle _getFontStyle(
     double fontSize = 15,
     Color? bgColor,
     FontWeight fontWeight = FontWeight.normal,
-    String fontFamily = AssetsConst.zillasLabFont,
+    String fontFamily = AssetsConst.poppinsFonts,
     TextDecoration txtDecoration = TextDecoration.none}) {
   return TextStyle(
       color: txtColor,
@@ -348,12 +348,12 @@ Widget raisedRoundAppColorBtn(String txt, Function btnClick) => ButtonTheme(
       child: ElevatedButton(
         onPressed: () => btnClick,
         clipBehavior: Clip.antiAlias,
-        child: getTxtWhiteColor(
-            msg: 'Add Address', fontSize: 15, fontWeight: FontWeight.bold),
         style: ElevatedButton.styleFrom(
-            primary: ColorConst.appColor,
+            backgroundColor: ColorConst.appColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20))),
+        child: getTxtWhiteColor(
+            msg: 'Add Address', fontSize: 15, fontWeight: FontWeight.bold),
       ),
     );
 
@@ -366,12 +366,12 @@ Widget raisedRoundColorBtn(String txt, Color color, Function() btnClick) =>
           btnClick();
         },
         clipBehavior: Clip.antiAlias,
-        child: getTxtWhiteColor(
-            msg: 'Add Address', fontSize: 15, fontWeight: FontWeight.bold),
         style: ElevatedButton.styleFrom(
-            primary: color,
+            backgroundColor: color,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20))),
+        child: getTxtWhiteColor(
+            msg: 'Add Address', fontSize: 15, fontWeight: FontWeight.bold),
       ),
     );
 
@@ -787,7 +787,7 @@ Widget getStaggered(
     shrinkWrap: true,
     cacheExtent: height,
     itemBuilder: (context, index) {
-      return  widget(context, index);
+      return widget(context, index);
       //   Tile(
       //   index: index,
       //   extent: (index % 5 + 1) * 100,

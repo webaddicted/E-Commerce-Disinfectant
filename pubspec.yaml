@@ -4,31 +4,31 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.3 <4.0.0'
+  sdk: ^3.6.0
 
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  get: ^4.6.5
-  dio: ^5.2.0
-  logger: ^1.4.0
-  shared_preferences: ^2.1.2
-  carousel_slider: ^4.2.1
+  cupertino_icons: ^1.0.8
+  get: ^4.6.6
+  dio: ^5.7.0
+  logger: ^2.5.0
+  shared_preferences: ^2.3.5
+  carousel_slider: ^5.0.0
   share: ^2.0.4
-  url_launcher: ^6.1.11
-  cached_network_image: ^3.2.3
-  lottie: ^2.4.0
-  flutter_svg: ^2.0.6
-  flutter_staggered_grid_view: ^0.6.2
-  flutter_lints: ^2.0.1
-  pinput: ^2.2.31
-  intl: ^0.18.1
+  url_launcher: ^6.3.1
+  cached_network_image: ^3.4.1
+  lottie: ^3.3.1
+  flutter_svg: ^2.0.17
+  flutter_staggered_grid_view: ^0.7.0
+  flutter_lints: ^5.0.0
+  pinput: ^5.0.1
+  intl: ^0.20.1
   flutter_rating_bar: ^4.0.1
-  font_awesome_flutter: ^10.4.0
-  barcode_scan2: ^4.2.4
+  font_awesome_flutter: ^10.8.0
+  barcode_scan2: ^4.3.3
 
 
 dev_dependencies:
@@ -40,3 +40,24 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/fonts/
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 900
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Italic.ttf
+          style: italic
+
+
+

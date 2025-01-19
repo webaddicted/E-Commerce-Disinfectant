@@ -29,7 +29,11 @@ class WalletPage extends GetView<HomeController> {
     return Stack(
       children: <Widget>[
         Column(
-          children: [  getAppBarWithBackBtn(title: StringConst.myWallet), getCard(), Flexible(child: getList())],
+          children: [
+            getAppBarWithBackBtn(title: StringConst.myWallet),
+            getCard(),
+            Flexible(child: getList())
+          ],
         ),
       ],
     );
@@ -49,7 +53,8 @@ class WalletPage extends GetView<HomeController> {
       },
       separatorBuilder: (BuildContext context, int index) {
         return Container(
-            margin: const EdgeInsets.only(left: 8, right: 8), child: getDivider());
+            margin: const EdgeInsets.only(left: 8, right: 8),
+            child: getDivider());
       },
     );
   }
@@ -64,7 +69,8 @@ class WalletPage extends GetView<HomeController> {
         children: [
           Container(height: 92, color: color, width: 7),
           Container(
-            margin: const EdgeInsets.only(left: 15, right: 5, top: 3, bottom: 3),
+            margin:
+                const EdgeInsets.only(left: 15, right: 5, top: 3, bottom: 3),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -131,7 +137,7 @@ class WalletPage extends GetView<HomeController> {
                     style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.only(
                             left: 50, right: 50, top: 14, bottom: 14),
-                        primary: ColorConst.appColor,
+                        backgroundColor: ColorConst.appColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                   ),

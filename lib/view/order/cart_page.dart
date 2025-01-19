@@ -59,8 +59,7 @@ class CartPage extends GetView<HomeController> {
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.black12,
                 image: DecorationImage(
-                    image: NetworkImage(item.url),
-                    fit: BoxFit.cover)),
+                    image: NetworkImage(item.url), fit: BoxFit.cover)),
             alignment: Alignment.center,
             // margin: const EdgeInsets.symmetric(horizontal: 10),
             width: 130,
@@ -241,7 +240,7 @@ class CartPage extends GetView<HomeController> {
                       style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.only(
                               left: 60, right: 60, top: 10, bottom: 10),
-                          primary: ColorConst.appColor,
+                          backgroundColor: ColorConst.appColor,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)))),
                 )

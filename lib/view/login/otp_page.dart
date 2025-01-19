@@ -129,6 +129,7 @@ class OtpPage extends GetView<LoginController> {
       }
     });
   }
+
   final focusNode = FocusNode();
 
   Widget onlySelectedBorderPinPut() {
@@ -160,9 +161,6 @@ class OtpPage extends GetView<LoginController> {
         child: Pinput(
           controller: _pinPutController,
           focusNode: focusNode,
-          androidSmsAutofillMethod:
-          AndroidSmsAutofillMethod.smsUserConsentApi,
-          listenForMultipleSmsOnAndroid: true,
           defaultPinTheme: defaultPinTheme,
           validator: (value) {
             return value == '2222' ? null : 'Pin is incorrect';
