@@ -14,7 +14,7 @@ ThemeData lightThemeData(BuildContext context) {
     canvasColor: Colors.white,
     scaffoldBackgroundColor: const Color.fromARGB(255, 245, 245, 245),
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    tabBarTheme: const TabBarTheme(
+    tabBarTheme: const TabBarThemeData(
       labelColor: Colors.black,
       unselectedLabelColor: Colors.grey,
       indicatorSize: TabBarIndicatorSize.tab,
